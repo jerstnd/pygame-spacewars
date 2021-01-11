@@ -68,23 +68,23 @@ def draw_window(red, yellow, red_bullets, yellow_bullets, red_health, yellow_hea
 
 # movement handle
 def yellow_handle_movement(keys_pressed, yellow):
-    if keys_pressed[pygame.K_a] and yellow.x - VEL > 0: # left
+    if keys_pressed[pygame.K_a] and yellow.x - VEL > 0:                             # left
         yellow.x -= VEL
-    if keys_pressed[pygame.K_d] and yellow.x + VEL + yellow.width < BORDER.x: # right
+    if keys_pressed[pygame.K_d] and yellow.x + VEL + yellow.width < BORDER.x:       # right
         yellow.x += VEL
-    if keys_pressed[pygame.K_w] and yellow.y - VEL > 0: # up
+    if keys_pressed[pygame.K_w] and yellow.y - VEL > 0:                             # up
         yellow.y -= VEL
-    if keys_pressed[pygame.K_s] and yellow.y + VEL + yellow.height < HEIGHT - 15: # down
+    if keys_pressed[pygame.K_s] and yellow.y + VEL + yellow.height < HEIGHT - 15:   # down
         yellow.y += VEL
 
 def red_handle_movement(keys_pressed, red):
-    if keys_pressed[pygame.K_LEFT] and red.x - VEL > BORDER.x + BORDER.width: # left
+    if keys_pressed[pygame.K_LEFT] and red.x - VEL > BORDER.x + BORDER.width:        # left
         red.x -= VEL
-    if keys_pressed[pygame.K_RIGHT] and red.x + VEL + red.width < WIDTH: # right
+    if keys_pressed[pygame.K_RIGHT] and red.x + VEL + red.width < WIDTH:             # right
         red.x += VEL
-    if keys_pressed[pygame.K_UP] and red.y - VEL > 0: # up
+    if keys_pressed[pygame.K_UP] and red.y - VEL > 0:                                # up
         red.y -= VEL
-    if keys_pressed[pygame.K_DOWN] and red.y + VEL + red.height < HEIGHT - 15: # down
+    if keys_pressed[pygame.K_DOWN] and red.y + VEL + red.height < HEIGHT - 15:       # down
         red.y += VEL
 
 def handle_bullets(yellow_bullets, red_bullets, yellow, red):
